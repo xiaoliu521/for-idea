@@ -1,0 +1,7 @@
+
+m
+java:S2095
+"PUse try-with-resources or close this "FFmpegFrameGrabber" in a "finally" clause.(Ûë°Ã8‹œ¤ƒ2
+{
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8‡°¡¤ƒ2
+L	java:S106"+Replace this use of System.out by a logger.(—ÃĞ­øÿÿÿÿ8İø›¤ƒ2

@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/aop
+      http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- 定义目标类 -->
+    <bean id="target" class="org.example.spring.TargetClass"></bean>
+    <!-- 定义切面类 -->
+    <bean id="aspect" class="org.example.spring.AspectClass"></bean>
+    <!-- 开启自动代理 -->
+    <aop:config proxy-target-class="true">
+        <!-- 指定切入点表达式 -->
+        <aop:aspect ref="aspect">
+            <aop:before pointcut="execution(* org.example.spring.TargetClass.*(..))" method="beforeAdvice"></aop:before>
+            <aop:after pointcut="execution(* org.example.spring.TargetClass.*(..))" method="afterAdvice"></aop:after>
+        </aop:aspect>
+    </aop:config>
+</beans>

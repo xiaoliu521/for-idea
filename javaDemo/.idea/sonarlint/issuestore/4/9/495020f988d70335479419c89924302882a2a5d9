@@ -1,0 +1,6 @@
+
+
+java:S1488"_Immediately return this expression instead of assigning it to the temporary variable "running".(¶…Ïùúÿÿÿÿ8‹ª–‘Ç1
+L	java:S106	"+Replace this use of System.out by a logger.(¹‰¸®ÿÿÿÿÿ8Äö”‘Ç1
+L	java:S106"+Replace this use of System.out by a logger.(®ßüÿÿÿÿ8Åö”‘Ç1
+L	java:S106"+Replace this use of System.out by a logger.(Æì° úÿÿÿÿ8Æö”‘Ç1
