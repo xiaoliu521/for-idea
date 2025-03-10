@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>untitled</artifactId>
+    <artifactId>javaDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -52,6 +52,31 @@
             <artifactId>ffmpeg</artifactId>
             <version>4.4-1.5.6</version>
             <classifier>windows-x86_64</classifier>
+        </dependency>
+
+        <!-- 对于 .xls 文件 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        <!-- 对于 .xlsx 文件 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        <!-- 对于 Excel 文件的样式和格式 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <!-- 对于 Excel 文件的日期格式 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-full</artifactId>
+            <version>5.2.3</version>
         </dependency>
     </dependencies>
 

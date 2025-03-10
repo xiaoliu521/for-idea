@@ -1,0 +1,18 @@
+<!DOCTYPE html> <!-- 文档类型声明：告诉浏览器使用哪种HTML版本来显示网页，当前是HTML5，html4.0.1不需要写 -->
+<html lang="zh-CN"> <!-- 语言,代表是中文网页 英文网页使用en，法语网页使用fr，俄罗斯网页使用ru -->
+  <head>
+    <meta charset="utf-8"> <!-- 字符编码 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  IE浏览器兼容性设置 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!-- 移动端适配， viewport: 代表视口，width=device-width: 视口宽度等于设备宽度，initial-scale=1.0: 初始缩放比例是1.0 -->
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico"> <!-- 网站图标 -->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script type="text/javascript" src="http://localhost:8081/samples-springboot-back/pageoffice.js"></script>
+</html>
