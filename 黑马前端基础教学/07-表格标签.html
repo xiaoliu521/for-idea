@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <caption>1212312</caption>
+    <!-- 表格标签 -->
+    <div>
+        <h1>表格标签</h1>
+        <h2>1.表格的基本结构</h2>
+        <p>表格由行（tr）和列（td）组成。行用于定义表格中的行，列用于定义表格中的列。</p>
+        <pre>
+            <code>
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;第一行第一列&lt;/td&gt;
+                        &lt;td&gt;第一行第二列&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;第二行第一列&lt;/td&gt;
+                        &lt;td&gt;第二行第二列&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <h2>2.表格的表头</h2>
+        <p>表格的表头用于定义表格的标题。表头由表头行（th）组成。</p>
+        <pre>
+            <code>
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;表头1&lt;/th&gt;
+                        &lt;th&gt;表头2&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;第一行第一列&lt;/td&gt;
+                        &lt;td&gt;第一行第二列&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;第二行第一列&lt;/td&gt; 
+                        &lt;td&gt;第二行第二列&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <h2>3.表格的属性</h2>
+        <p>表格有一些常用的属性，用于定义表格的样式和行为。</p>
+        <ul>
+            <li>border：定义表格的边框。</li>
+            <li>cellspacing：定义单元格之间的间距。</li>
+            <li>cellpadding：定义单元格内容与边框之间的间距。</li>
+            <li>width：定义表格的宽度。</li>
+            <li>height：定义表格的高度。</li>
+        </ul>
+        <pre>
+            <code>
+                &lt;table border="1" cellspacing="0" cellpadding="0" width="100%" height="100%"&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;表头1&lt;/th&gt;
+                        &lt;th&gt;表头2&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;第一行第一列&lt;/td&gt;
+                        &lt;td&gt;第一行第二列&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;第二行第一列&lt;/td&gt;
+                        &lt;td&gt;第二行第二列&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <h2>4.表格的合并</h2>
+        <p>表格的单元格可以合并，以减少表格的宽度和高度。</p>
+        <ul>
+            <li>colspan：定义单元格跨多少列。</li>
+            <li rowspan：定义单元格跨多少行。</li>
+        </ul>
+        <pre>
+            <code>
+                &lt;table border="1" cellspacing="0" cellpadding="0" width="100%" height="100%"&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;表头1&lt;/th&gt;
+                        &lt;th&gt;表头2&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td colspan="2"&gt;第一行第一列&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;第二行第一列&lt;/td&gt;
+                        &lt;td&gt;第二行第二列&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+    </div>  
+    表头单元格会加粗、居中显示 
+
+    <table align="center" border="1" cellpadding="20" cellspacing="0">
+        <caption>测试表格</caption>
+        <tbody>
+            <tr>
+                <th>表头1</th>
+                <th>表头2</th>
+            </tr>
+            <tr>
+                <td>第一行第一列</td>
+                <td>第一行第二列</td>
+            </tr>
+            <tr>
+                <td>第二行第一列</td>
+                <td>第二行第二列</td>
+            </tr>
+        </tbody>
+        <tr>
+            <th>表头1</th>
+            <th>表头2</th>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">第一行第一列</td>
+        </tr>
+        <tr>
+            <td>第二行第一列</td>
+            <td>第二行第二列</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>表头1</th>
+            <th>表头2</th>
+        </tr>
+        <tr>
+            <td rowspan="2" style="text-align: center;">第一行第一列</td>
+            <td style="text-align: center;">第一行第一列</td>
+        </tr>
+        <tr>
+            <td>第二行第一列</td>
+            <td>第二行第二列</td>
+        </tr>
+    </table>
+
+</body>
+</html>

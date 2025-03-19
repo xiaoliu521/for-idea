@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <iframe src="" frameborder="0"></iframe>
+    <div>超链接标签</div>
+    <!-- 什么是超链接标签： a标签，是超链接标签，是双标签 -->
+    a标签是单词anchor的缩写，意为锚
+
+    <div>
+        <span>target:默认是self，在当前窗口打开</span>
+        <a href="https://www.baidu.com" >百度</a>
+    </div>
+    <div>
+        <span>target:_blank : 在新窗口中打开页面</span>
+        <a href="https://www.baidu.com" target="_blank">百度</a>
+    </div>
+    <div>
+        <span>target: _parent : 在父窗口中打开页面</span>
+        <a href="https://www.baidu.com" target="_parent">百度</a>
+    </div>
+    <div>
+        <span>target: _top ： 在顶层窗口中打开页面</span>
+        <a href="https://www.baidu.com" target="_top">百度</a>
+    </div>
+    <div>
+        <span>打开本地html文件</span>
+        <a href="03-文本格式化.html" target="_blank">03-文本格式化.html</a>
+    </div>
+    <div>
+        <span>空链接，使用#占位</span>
+        <a href="#">空链接</a>
+    </div>
+    <div>
+        <span>下载文件</span>
+        <a href="05-链接标签.html" download="05-链接标签.html">下载文件</a>
+    </div>
+    <div>
+        <span>title:鼠标悬停显示的提示信息</span>
+        <a href="https://www.baidu.com" title="百度一下，你就知道">百度</a>
+    </div>
+    <div>
+        <span>rel:关系，用于定义当前文档与被链接文档之
+        <a href="URL_ADDRESS.baidu.com" title="百度一下，你就知道">百度</a>
+    </div>
+    <div>
+        <span>rel:关系，用于定义当前文档与被链接文档之间的关系</span> 
+        <a href="https://www.baidu.com" rel="nofollow">百度</a>
+    </div> 
+    <div>
+        <a href="./04-图像标签.html"><img src="https://baikebcs.bdimg.com/adpic/摄影大赛-PC词条右侧轮播1.png" alt=""></a>
+    </div>
+    <!-- 锚点 -->
+    <div>
+        <h1>锚点</h1>
+        <div>
+            <a href="#锚点">跳转到锚点</a>
+        </div>
+        <h2>1.什么是锚点</h2>
+        <p>锚点是网页中用于链接到特定位置的标识符。它通常以井号（#）开头，后面跟着一个标识符名称。</p>
+        <h2>2.锚点的作用</h2>
+        <p>锚点的主要作用是在网页中创建链接，使得用户可以直接跳转到指定的位置。通过使用锚点，用户可以快速导航到网页的不同部分，而无需滚动页面。</p>
+        <h2>3.如何创建锚点</h2>
+        <p>要创建锚点，只需在目标位置添加一个带有标识符名称的标签，例如：</p>
+        <pre>
+            <code>
+                &lt;h2 id="section1"&gt;这是第一个部分&lt;/h2&gt;
+            </code>
+        </pre>
+        <p>在这个例子中，我们创建了一个名为"section1"的锚点，它与标题标签"这是第一个部分"相关联。</p>
+        <h2>4.如何使用锚点</h2>
+        <p>要使用锚点，只需在链接中使用锚点标识符，例如：</p>
+        <pre>
+            <code>
+                &lt;a href="#section1"&gt;跳转到第一个部分&lt;/a&gt;
+            </code>
+        </pre>
+        <p>在这个例子中，我们创建了一个链接，当用户点击它时，它将跳转到与锚点"section1"相关联的位置。</p>
+        <h2>5.锚点的注意事项</h2>
+        <p>在使用锚点时，需要注意以下几点：</p>
+        <ul>
+            <li>锚点标识符应该是唯一的，以避免与其他元素冲突。</li>
+            <li>锚点标识符应该与目标位置的标签名称匹配，以确保链接的准确性。</li>
+            <li>锚点标识符应该使用小写字母和数字，以提高链接的可读性。</li>
+        </ul>
+    </div>
+
+    <div>
+        <h1 id="锚点">锚点</h1>
+        <h2>1.什么是锚点</h2>
+        <p>锚点是网页中用于链接到特定位置的标识符。它通常以井号（#）开头，后面跟着一个标识符名称。</p>
+        <h2>2.锚点的作用</h2>   
+        <p>锚点的主要作用是在网页中创建链接，使得用户可以直接跳转到指定的位置。通过使用锚点，用户可以快速导航到网页的不同部分，而无需滚动页面。</p>
+        <h2>3.如何创建锚点</h2>
+        <p>要创建锚点，只需在目标位置添加一个带有标识符名称的标签，例如：</p>
+        <pre>
+            <code>
+                &lt;h2 id="section1"&gt;这是第一个部分&lt;/h2&gt;
+            </code>
+        </pre>
+        <p>在这个例子中，我们创建了一个名为"section1"的锚点，它与标题标签"这是第一个部分"相关联。</p>
+        <h2>4.如何使用锚点</h2>
+        <p>要使用锚点，只需在链接中使用锚点标识符，例如：</p>
+        <pre>
+            <code>  
+                &lt;a href="#section1"&gt;跳转到第一个部分&lt;/a&gt;
+
+            </code>
+        </pre>
+        <p>在这个例子中，我们创建了一个链接，当用户点击它时，它将跳转到与锚点"section1"相关联的位置。</p>
+        <h2>5.锚点的注意事项</h2>
+        <p>在使用锚点时，需要注意以下几点：</p>
+        <ul>
+            <li>锚点标识符应该是唯一的，以避免与其他元素冲突。</li>
+            <li>锚点标识符应该与目标位置的标签名称匹配，以确保链接的准确性。</li>
+            <li>锚点标识符应该使用小写字母和数字，以提高链接的可读性。</li>
+        </ul>
+        <p>通过遵循这些注意事项，您可以确保锚点链接的正确性和有效性。</p>
+    </div>
+
+</body>
+</html>

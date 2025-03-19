@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    使用表单目的为了收集用户信息
+    表单域就是一个区域，用于收集用户信息，表单域包含表单元素，就是form标签   ·
+    input是个单标签
+    <form action="#" method="get">
+        <label for="username">用户名</label>
+        <input type="text" id="username" name="username" placeholder="请输入用户名">
+        <label for="password">密码</label>
+        <input type="password" id="password" name="password" placeholder="请输入密码">
+        性别： 
+        <label for="man">男</label><input type="radio" id="man" name="sex" value="1" >
+        <label for="woman">女</label><input type="radio" name="sex" id="woman" value="0"> <br>
+        爱好： 篮球 <input type="checkbox" name="" id="checkbox" checked> 足球 <input type="checkbox" name="" id=""> 乒乓球 <input type="checkbox" name="" id="">
+      
+        <select name="select" id="" >
+            <option value="1">1111</option>
+            <option value="2" selected >2222</option>
+        </select>
+        <input type="file" value="上传文件" name="file" id="">
+        <input type="color" name="color" id="">
+        <input type="date" name="date" id="">
+        <input type="datetime-local" name="" id="">
+        <input type="email" name="email" id=""> 
+        <input type="tel" name="" id="">
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+    label 标签用于给表单元素添加标签,label标签的for属性用于指定标签的内容，for属性的值为表单元素的id属性的值
+    <textarea name="" cols="100" rows="10" id=""></textarea>
+
+</body>
+
+<script>
+    // 表单元素的name属性的值为表单元素的名称，表单元素的value属性的值为表单元素的值
+    // 表单元素的type属性的值为表单元素的类型
+    document.getElementsByName("sex")[0].checked = true;
+    document.getElementsByTagName("input")[0].value = "123";
+    document.forms[0].onsubmit = function(e){
+        // 获取表单元素的值
+        console.log(e.target.username.value);
+        console.log(this.username.value);
+        console.log(this.password.value);
+        console.log(this.sex.value); 
+        console.log(this.select.value);
+        console.log(this.file.value);
+        console.log(this.color.value);
+        console.log(this.date.value);
+        console.log(this.time.value);
+        console.log(this.email.value);
+        console.log(this.url.value);
+        console.log(this.search.value);
+        console.log(this.tel.value);
+        console.log(this.range.value);
+        console.log(this.number.value); 
+        // 阻止表单的默认提交行为
+        e.preventDefault();
+    }
+
+
+
+
+
+
+</script>
+</html>
