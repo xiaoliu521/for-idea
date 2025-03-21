@@ -28,7 +28,7 @@
         <input type="date" name="date" id="">
         <input type="datetime-local" name="" id="">
         <input type="email" name="email" id=""> 
-        <input type="tel" name="" id="">
+        <input type="tel" name="tel" name="" id="">
         <input type="submit" value="提交">
         <input type="reset" value="重置">
     </form>
@@ -36,6 +36,12 @@
     <textarea name="" cols="100" rows="10" id=""></textarea>
 
 </body>
+
+<style>
+    input[type=checkbox]{ 
+        accent-color: red;
+    }
+</style>
 
 <script>
     // 表单元素的name属性的值为表单元素的名称，表单元素的value属性的值为表单元素的值
@@ -61,12 +67,7 @@
         console.log(this.number.value); 
         // 阻止表单的默认提交行为
         e.preventDefault();
-    }
-
-
-
-
-
+    } 
 
 </script>
 </html>

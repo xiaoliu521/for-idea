@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* align-contene和align-items的区别在于align-contene是针对多行，align-items是针对单行 */
+    #main{
+        width: 70px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    #main div{
+        width: 70px;
+        height: 70px;
+    }
+</style>
+<body>
+    <div id="main">
+        <div style="background-color: coral;" draggable="false"></div>
+        <div style="background-color: lightblue;"></div>
+        <div style="background-color: pink;"></div>
+    </div>
+</body> 
+</html>
