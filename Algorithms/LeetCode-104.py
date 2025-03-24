@@ -17,7 +17,7 @@ class Solution(object):
         if not root:
             return 0
         else:
-            return max(self.maxDepth(root.left), self.maxDepth(root.right) + 1)
+            return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
 
     def maxDepth2(self, root):
         if not root: return 0
@@ -35,7 +35,7 @@ class Solution(object):
     def maxDepth3(self, root):
         if not root: return 0
         queue = [root]
-        res = 0
+        res = 0 
         while queue:
             res += 1
             for _ in range(len(queue)):
