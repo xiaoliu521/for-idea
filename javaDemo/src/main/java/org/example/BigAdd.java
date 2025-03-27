@@ -29,10 +29,6 @@ public class BigAdd {
             b[b.length - 1 - i] = (str2.charAt(i) - 48);
         }
 
-
-
-
-
         // 相加
         for (int i = 0; i < res.length - 1; i++) {
             // i 大于任一长度，则计算完成
