@@ -1,0 +1,15 @@
+D:\zySpace\github\for-idea\C#\HelloWorld\bin\Debug\net8.0\HelloWorld.exe
+D:\zySpace\github\for-idea\C#\HelloWorld\bin\Debug\net8.0\HelloWorld.deps.json
+D:\zySpace\github\for-idea\C#\HelloWorld\bin\Debug\net8.0\HelloWorld.runtimeconfig.json
+D:\zySpace\github\for-idea\C#\HelloWorld\bin\Debug\net8.0\HelloWorld.dll
+D:\zySpace\github\for-idea\C#\HelloWorld\bin\Debug\net8.0\HelloWorld.pdb
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\HelloWorld.AssemblyInfoInputs.cache
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\HelloWorld.AssemblyInfo.cs
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\HelloWorld.csproj.CoreCompileInputs.cache
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\HelloWorld.sourcelink.json
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\HelloWorld.dll
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\refint\HelloWorld.dll
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\HelloWorld.pdb
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\HelloWorld.genruntimeconfig.cache
+D:\zySpace\github\for-idea\C#\HelloWorld\obj\Debug\net8.0\ref\HelloWorld.dll
