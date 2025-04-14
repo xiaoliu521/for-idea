@@ -6,6 +6,8 @@
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="author" content="Bill Gates">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 引入jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <style>
   .left{ 
@@ -25,15 +27,85 @@
     width: 200px;
     height: 200px;
   }
+  .hidden-ele{
+    display: none;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+  }
 </style>
 <body>
+  <!-- 事件冒泡 -->
+   <div onclick="event.stopPropagation();clickParent()" style="width: 200px; height: 200px; background-color: antiquewhite;">
+    <div onclick="event.stopPropagation();clickChild()" style="width: 100px; height: 100px; background-color: aqua;"></div>
+   </div>
+  <!-- 水平垂直居中 -->
+   <!-- 第一种方式 定位 + margin：auto -->
+  <div style="width: 200px; height: 200px; position: relative; background-color: antiquewhite;">
+     <div style="width: 100px; height: 100px; position: absolute; background-color: aqua; top: 0; bottom: 0; left: 0; right: 0; margin: auto;"></div>
+  </div>
+  <!-- 第二种方式 定位 + margin负值  -->
+  <div style="width: 200px; height: 200px; position: relative; background-color: antiquewhite;">
+    <div style="width: 100px; height: 100px; position: absolute; background-color: aqua; top: 50%; left: 50%; margin-top: -50px; margin-left: -50px;"></div>
+  </div>
+  <!-- 第三种方式 定位 + transform -->
+  <div style="width: 200px; height: 200px; position: relative; background-color: antiquewhite;">
+    <div style="width: 100px; height: 100px; position: absolute; background-color: aqua; top: 50%; left: 50%; transform: translate(-50%, -50%)"></div>
+  </div>
+  <!-- 第四种方式 flex -->
+   <div style="width: 200px; height: 200px; display: flex; justify-content:center; align-items:center; background-color: antiquewhite;"> 
+    <div style="width: 100px; height: 100px; background-color: aqua;"></div>
+   </div>
+   <!-- 第五种方式 table -->
+    <!-- 父元素：display:table-cell; vertical-align:middle; text-align:center; 子元素：display:inline-block; -->
+    <div style="width: 200px; height: 200px; display: table-cell; background-color: antiquewhite; vertical-align: middle; text-align: center;">
+      <div style="width: 100px; height: 100px; display: inline-block; background-color: aqua;"></div>     
+    </div>
+    <!-- 第六种方式 grid -->
+     <div style="width: 200px; height: 200px; display: grid; justify-content: center; align-items: center; background-color: antiquewhite;">
+      <div style="width: 100px; height: 100px; background-color: aqua;"></div>
+     </div>
 
+  
+
+  <div style="width: 100px; overflow: hidden; text-overflow: ellipsis;">12312312312312312312312312321312312312312312312321312</div>
+  <div style="height: 100px; position: relative; top: 200px"></div>
+  <div style="width: 0; height: 0; border-width: 20px; border-style: solid; border-color: transparent transparent red transparent"></div>
+<div style="height: 100px; margin-bottom: 30px; background: red;"></div>
+<div style="height: 100px; margin-top: 20px; background: red;"></div>
+
+<div class="hidden-ele"></div>
 <p>所有元信息都在头部......</p>
 <div class="wrap">
     <div class="left">23232</div>
     <div class="mid">123123</div>
     <div class="right">2132323</div>
+
+    <a href="www.baidu.com" target="_blank">123123</a>
 </div>
 
+<script>
+
+  // 打开一个新窗口，并在点击时移动它
+  // moveBy() 方法用于移动窗口到指定位置（相对于当前位置）。但浏览器会阻止这种行为，因为它可能会导致用户感到困惑或不满。
+// const newWindow = window.open("", "_blank", "width=300,height=200");
+// newWindow.document.write("<button onclick='window.moveBy(50,50)'>移动此窗口</button>");
+
+  // $("div:hidden").css("background-color","yellow").show(1000);
+  $("div:hidden").css("background-color","pink")
+  document.querySelector(".hidden-ele").style.display = "block";
+  console.log(screen.width)
+  
+  Object.prototype.toString.call(1) // [object Number]
+  Object.prototype.toString(123) // [object Number]
+  var clickParent = function(){ 
+    alert("clickParent")
+  }
+
+  var clickChild = function(){
+    alert("clickChild")
+  }
+  
+</script>
 </body>
 </html>

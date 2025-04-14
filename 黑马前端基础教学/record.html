@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄像头录制示例</title>
+    <script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .video-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        video {
+            background: #000;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 4px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+        button.stop {
+            background: #db4437;
+        }
+        h1 {
+            color: #4285f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>摄像头录制演示</h1>
+        
+        <div class="controls">
+            <button id="startBtn">开始录制</button>
+            <button id="stopBtn" class="stop" disabled>停止录制</button>
+            <button id="downloadBtn" disabled>下载视频</button>
+        </div>
+        
+        <div class="video-container">
+            <div>
+                <h3>摄像头实时预览</h3>
+                <video id="liveVideo" autoplay muted playsinline></video>
+            </div>
+            <div>
+                <h3>录制回放</h3>
+                <video id="playbackVideo" controls></video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 获取DOM元素
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const liveVideo = document.getElementById('liveVideo');
+        const playbackVideo = document.getElementById('playbackVideo');
+        
+        let recorder;
+        let stream;
+        let recordedBlob;
+        
+        // 开始录制
+        startBtn.addEventListener('click', async () => {
+            try {
+                // 获取摄像头视频流
+                stream = await navigator.mediaDevices.getUserMedia({
+                    video: true,
+                    audio: true
+                });
+                
+                // 显示实时视频
+                liveVideo.srcObject = stream;
+                
+                // 创建录制器
+                recorder = new RecordRTC(stream, {
+                    type: 'video',
+                    mimeType: 'video/mp4',
+                    
+                    bitsPerSecond: 500000, // 500kbps
+                    frameInterval: 25,
+                    recorderType: MediaStreamRecorder
+                });
+                
+                // 开始录制
+                recorder.startRecording();
+                
+                // 更新按钮状态
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+                downloadBtn.disabled = true;
+                
+                console.log('录制已开始...');
+            } catch (error) {
+                console.error('无法访问摄像头:', error);
+                alert('无法访问摄像头: ' + error.message);
+            }
+        });
+        
+        // 停止录制
+        stopBtn.addEventListener('click', () => {
+            // 停止录制
+            recorder.stopRecording(() => {
+                // 获取录制的Blob
+                recordedBlob = recorder.getBlob();
+                
+                // 创建视频URL用于回放
+                playbackVideo.src = URL.createObjectURL(recordedBlob);
+                
+                // 更新按钮状态
+                stopBtn.disabled = true;
+                downloadBtn.disabled = false;
+                
+                console.log('录制已停止');
+                
+                // 停止所有视频轨道
+                stream.getTracks().forEach(track => track.stop());
+                liveVideo.srcObject = null;
+            });
+        });
+        
+        // 下载视频
+        downloadBtn.addEventListener('click', () => {
+            if (!recordedBlob) return;
+            
+            // 创建下载链接
+            const url = URL.createObjectURL(recordedBlob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `录制视频_${new Date().toISOString().slice(0, 19)}.mp4s`;
+            document.body.appendChild(a);
+            a.click();
+            
+            // 清理
+            setTimeout(() => {
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 100);
+        });
+    </script>
+</body>
+</html>

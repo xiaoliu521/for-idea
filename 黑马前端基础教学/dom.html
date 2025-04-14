@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const divEl = document.createElement("div");
+    document.body.appendChild(divEl);
+
+    const textEl = document.createTextNode("这是一个文本节点");
+    divEl.appendChild(textEl);
+
+    let dom_id = document.createAttribute("id");
+    dom_id.value = "myDiv";
+    divEl.setAttributeNode(dom_id); 
+
+    // 获取节点
+    var myDiv = document.querySelector("#myDiv"); // 通过id获取节点
+    myDiv.innerHTML = "1231231231231232131232132132132131231231232131231231231232132132131232131231"
+    var li = document.querySelectorAll("div");
+    console.log(li);
+
+    // 更新节点
+    myDiv.innerHTML = "这是一个新的文本内容"; // 更新节点的文本内容
+    myDiv.innerText = "<div>12312321</div>" // 不转义
+
+    // style
+    myDiv.style.color = "red"; // 设置文本颜色为红色
+    var divEl1 = document.createElement("div"); // 创建一个新的div元素
+    divEl1.style.backgroundColor = "blue"; // 设置背景颜色为蓝色
+    divEl1.innerHTML = "qweqweqweqweqweqwewedfasdasd";
+    myDiv.insertBefore(divEl1, myDiv.firstChild); // 在myDiv的第一个子节点之前插入新的div元素
+
+    window.moveBy(100, 1000); // 移动窗口到指定位置（相对于当前位置）
+</script>
+</html>
