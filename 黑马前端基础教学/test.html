@@ -35,6 +35,18 @@
   }
 </style>
 <body>
+  <!-- 清除浮动 -->
+  <div class="wrap">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="mid"></div>
+  </div>
+  <!-- 隐藏元素 -->
+  <div class="hidden-ele">
+    这是一个隐藏的元素
+  </div>
+  
+  <!-- 事件委托 -->
   <!-- 事件冒泡 -->
    <div onclick="event.stopPropagation();clickParent()" style="width: 200px; height: 200px; background-color: antiquewhite;">
     <div onclick="event.stopPropagation();clickChild()" style="width: 100px; height: 100px; background-color: aqua;"></div>
