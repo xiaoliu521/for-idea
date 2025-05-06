@@ -1,0 +1,6 @@
+# C#相关文件gitignore 
+**/obj/
+**/bin/
+**/packages/
+**/Properties/AssemblyInfo.cs 
+**/Properties/AssemblyInfo.*.cs
