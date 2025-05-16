@@ -1,0 +1,27 @@
+<template>
+	<view> 
+	12312312
+		
+		<!-- #ifndef APP-ANDROID -->
+			<uv-icon name="photo" size="30" color="#909399"></uv-icon>
+			<uv-button type="primary" text="确定"></uv-button>
+		<!-- #endif -->
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>

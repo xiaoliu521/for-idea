@@ -287,6 +287,7 @@ export function createApp() {
       app.component('CompForPlugin2', CompForPlugin)
     }
   }, null, null)
+ 
 
   app.config.globalProperties.globalPropertiesStr = 'default string'
   app.config.globalProperties.globalPropertiesNum = 0
